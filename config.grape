@@ -1,0 +1,15 @@
+{
+  "title": "My Cool Grape Site",
+  "headerLinks": {
+    "left": {
+      "url": "https://www.wyattlovesgrapes.com/widgets/tertiary/recycle/oops.html",
+      "text": "left link",
+      "title": "left"
+    },
+    "right": {
+      "url": "https://www.wyattlovesgrapes.com/widgets/tertiary/recycle/oops.html",
+      "text": "right link",
+      "title": "right"
+    }
+  }
+}
