@@ -1,0 +1,27 @@
+{
+  "title": "My Cool Grape Site",
+  "header": {
+    "left": {
+      "url": "https://www.wyattlovesgrapes.com/widgets/tertiary/recycle/oops.html",
+      "text": "left link",
+      "title": "left"
+    },
+    "right": {
+      "url": "https://www.wyattlovesgrapes.com/widgets/tertiary/recycle/oops.html",
+      "text": "right link",
+      "title": "right"
+    }
+  },
+  "footer": {
+    "left": {
+        "text": "the grape corporation",
+        "icon": "assets/grape-32x32.png"
+
+    },
+    "right": {
+        "madeByUrl": "https://www.wyattlovesgrapes.com/widgets/tertiary/recycle/oops.html",
+        "madeByLinkText": "grape.wtf"
+    }
+  },
+  "layout": "single-column"
+}

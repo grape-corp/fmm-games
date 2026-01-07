@@ -1,3 +1,5 @@
+import { renderCarousel } from "/components/core/carousel.js";
+import { load_config } from "/components/core/config.js";
 const cardsData = [
     { title: "Card 1", description: "This is the first card." },
     { title: "Card 2", description: "This is the second card." },
@@ -11,22 +13,9 @@ const cardsData = [
     { title: "Card 10", description: "Boom, ten!" }
 ];
 
-function renderCarousel(data, selector) {
-    const carousel = document.querySelector(selector);
-    if (!carousel) return;
-
-    carousel.innerHTML = '';
-
-    data.forEach(card => {
-        const cardEl = document.createElement('div');
-        cardEl.className = 'card';
-        cardEl.innerHTML = `<h3>${card.title}</h3><p>${card.description}</p>`;
-        carousel.appendChild(cardEl);
-    });
-}
-
-// Call the function when the page loads
+// page load
 document.addEventListener('DOMContentLoaded', () => {
-    renderCarousel(cardsData, '#carousel-1'); 
+    renderCarousel(cardsData, '#carousel-1');
     renderCarousel(cardsData, '#carousel-2');
-});
+    load_config();
+    });
