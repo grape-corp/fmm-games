@@ -18,7 +18,7 @@ body {
 
 }
 
-#content {
+#content.single-column {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,6 +26,14 @@ body {
     padding: 0px;
     font-size: 12px;
     flex: 1;
+}
+
+#content.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
 }
 
 header {
@@ -215,7 +223,7 @@ a:active {
 }
 
 /* --grape-corp-styles-- */
-#footer-grape-logo {
+#footer-logo {
     width: 16px;
     height: 16px;
     padding-right: 5px;
@@ -337,7 +345,7 @@ a:active {
     box-sizing: border-box;
     scroll-snap-type: x mandatory;
 }
-  
+
 .card {
     min-width: 200px;
     flex-shrink: 0;
@@ -348,12 +356,11 @@ a:active {
     scroll-snap-align: start;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
-  
+
 .card h3 {
     margin-top: 0;
 }
-  
+
 .card p {
     font-size: 12px;
 }
-  

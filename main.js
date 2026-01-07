@@ -1,5 +1,5 @@
 import { renderCarousel } from "/components/core/carousel.js";
-
+import { load_config } from "/components/core/config.js";
 const cardsData = [
     { title: "Card 1", description: "This is the first card." },
     { title: "Card 2", description: "This is the second card." },
@@ -17,25 +17,5 @@ const cardsData = [
 document.addEventListener('DOMContentLoaded', () => {
     renderCarousel(cardsData, '#carousel-1');
     renderCarousel(cardsData, '#carousel-2');
-
-    // load config
-    fetch('config.grape')
-        .then(res => res.text())
-        .then(text => JSON.parse(text))
-        .then(config => {
-            document.title = config.title;
-
-            const leftLink = document.querySelector('#header-left a');
-            const rightLink = document.querySelector('#header-right a');
-
-            leftLink.href = config.headerLinks.left.url;
-            leftLink.innerText = config.headerLinks.left.text;
-            leftLink.title = config.headerLinks.left.title;
-
-            rightLink.href = config.headerLinks.right.url;
-            rightLink.innerText = config.headerLinks.right.text;
-            rightLink.title = config.headerLinks.right.title;
-
-        })
-        .catch(err => console.error("Failed to load config:", err));
-});
+    load_config();
+    });
